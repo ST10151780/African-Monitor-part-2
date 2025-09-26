@@ -1,0 +1,331 @@
+/* Reset and Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  font-size: 1rem; /* base size for rem */
+  line-height: 1.6;
+  color: #333;
+  background-color: #f4f4f4;
+}
+
+/* Navigation Bar */
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: white;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 0.125rem 0.3125rem rgba(0,0,0,0.1);
+}
+
+nav .logo img {
+  height: 5rem;
+  width: auto;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.25rem;
+}
+
+nav ul li {
+  display: inline;
+}
+
+nav ul a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  font-size: 1.125rem;
+  transition: color 0.3s ease;
+}
+
+nav ul a:hover {
+  color: brown;
+}
+
+/* Hero Section */
+.hero {
+  height: 60vh;
+  background: url("image 1.jpg") no-repeat center center;
+  background-size: cover;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-text {
+  text-align: center;
+  color: white;
+  background: rgba(0,0,0,0.4); /* semi-transparent overlay */
+  padding: 2rem 3rem;
+  border-radius: 0.625rem;
+}
+
+.hero-text h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.hero-text h3 {
+  font-size: 1.75rem;
+  margin-bottom: 1rem;
+}
+
+.hero-text p {
+  font-size: 1.125rem;
+}
+
+/* Main Section */
+.main {
+  text-align: center;
+  padding: 2rem 1rem;
+  margin: 1rem;
+}
+
+.cards-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.main .card1, .main .card2, .main .card3 {
+  background: #fab888;
+  color: black;
+  padding: 1.25rem;
+  border-radius: 0.625rem;
+  flex: 1 1 25rem;
+  min-width: 250px;
+}
+
+/* Footer */
+footer {
+  background: #333;
+  color: white;
+  text-align: center;
+  padding: 1.25rem;
+}
+
+footer p {
+  margin: 0.3125rem 0;
+}
+
+/* About Page */
+.about-header, .about-footer-image {
+  width: 100%;
+  overflow: hidden;
+}
+
+.about-header img, .about-footer-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.about-content {
+  max-width: 56.25rem;
+  margin: 2.5rem auto;
+  padding: 1.25rem;
+  background: rgba(255,255,255,0.9);
+  border-radius: 0.625rem;
+  text-align: left;
+  color: black;
+}
+
+.about-content h1 {
+  text-align: center;
+  margin-bottom: 1.25rem;
+}
+
+.about-content h3 {
+  margin-top: 1.25rem;
+}
+
+.about-header .header-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: brown;
+  background: rgba(255, 255, 255, 0.7);
+  padding: 1.25rem 2.5rem;
+  border-radius: 0.625rem;
+}
+
+/* Gallery */
+.gallery {
+  text-align: center;
+  padding: 2.5rem 1rem;
+}
+
+.gallery h1 {
+  font-size: 2.25rem;
+  color: white;
+  margin-bottom: 1.875rem;
+}
+
+.gallery-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  gap: 1.25rem;
+  max-width: 75rem;
+  margin: 0 auto;
+}
+
+.gallery-item {
+  overflow: hidden;
+  border-radius: 0.75rem;
+  box-shadow: 0 0.25rem 0.625rem rgba(0,0,0,0.2);
+  transition: transform 0.3s ease;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.08);
+}
+
+/* Contact Page */
+.contact-header {
+  text-align: center;
+  padding: 3.125rem 1rem;
+  background: #8B4513;
+  color: white;
+}
+
+.contact-header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.625rem;
+}
+
+.contact-header p {
+  font-size: 1.125rem;
+}
+
+.contact-section {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 62.5rem;
+  margin: 2.5rem auto;
+  gap: 1.875rem;
+  padding: 0 1rem;
+}
+
+.contact-form, .contact-info {
+  flex: 1 1 20rem;
+  min-width: 20rem;
+  background: rgba(255,255,255,0.9);
+  padding: 1.25rem;
+  border-radius: 0.75rem;
+  box-shadow: 0 0.25rem 0.625rem rgba(0,0,0,0.2);
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 0.625rem;
+  border: 0.0625rem solid #ccc;
+  border-radius: 0.5rem;
+  margin-bottom: 0.9375rem;
+  font-size: 1rem;
+}
+
+.contact-form button {
+  background: brown;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.25rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background 0.3s ease;
+}
+
+.contact-form button:hover {
+  background: #5a2d0c;
+}
+
+/* Services Page */
+.services-header {
+  text-align: center;
+  padding: 3.125rem 1rem;
+  background: #8B4513;
+  color: white;
+}
+
+.services-header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.625rem;
+}
+
+.services-container {
+  max-width: 68.75rem;
+  margin: 2.5rem auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5625rem;
+}
+
+.service-card {
+  background: rgba(255,255,255,0.95);
+  border-radius: 0.75rem;
+  padding: 1.5625rem;
+  box-shadow: 0 0.25rem 0.625rem rgba(0,0,0,0.2);
+  transition: transform 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-0.3125rem);
+}
+
+/* Media Queries for Responsive Breakpoints */
+
+/* Tablet */
+@media (max-width: 1024px) {
+  body { font-size: 0.95rem; }
+  nav ul { gap: 1rem; }
+  .services-container { grid-template-columns: 1fr 1fr; }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  body { font-size: 0.9rem; }
+  nav ul { flex-direction: column; gap: 0.625rem; }
+  .services-container, .gallery-container { grid-template-columns: 1fr; }
+  .main, .about-content, .contact-form, .contact-info {
+    padding: 1rem;
+  }
+  .hero {
+    height: 40vh;
+  }
+  .hero-text h1 {
+    font-size: 2rem;
+  }
+  .hero-text h3 {
+    font-size: 1.25rem;
+  }
+  .hero-text p {
+    font-size: 1rem;
+  }
+}
+
+
